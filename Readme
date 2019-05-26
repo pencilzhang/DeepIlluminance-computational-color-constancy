@@ -1,0 +1,21 @@
+
+(1) Configuration
+	Ubuntu 14.04, Anaconda2-4.4.1, python2.7, caffe-master
+(2) Data pre-processing
+	Colorchecker dataset link,  http://www.cs.sfu.ca/~colour/data/shi_gehler/
+	Extract the png images into data/colorchecker-origin, no subfolders.
+	16bit to 8bit, run image_8bit.m
+	bright and dark piexel and sample: python search_patch_neighbor.py， 
+	gamma correction patch, run gamma.m
+	run create_data_lmdb.sh and create_lmdb.py to get LMDB file
+(3) Model Training
+	For context network: in data/context_network/ python patch_model.py 
+	For refinement network: in data/ refinement_network/ python patch_model.py
+(4) About pretrained model and LMDB file
+	To get the pretrained models on the ColorChecker dataset, please download Pretrained models on the ColorChecker Dataset link: XXXXX, and put the corresponding file name in the .py file.  
+(5) Three fold 
+ 	3 folds is in data/list/3folds
+(6) In order get the result on a trained model
+	First make a LMDB file from image
+	Then python context_network/trained_model/test.py
+	At last python refinement_network/trained_model/test.py, you will get the estimation result
