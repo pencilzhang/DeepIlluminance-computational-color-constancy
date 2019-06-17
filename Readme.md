@@ -1,6 +1,7 @@
-# DeepIlluminance: Contextual Illuminance Estimation via Deep Neural Networks
+﻿# DeepIlluminance: Contextual Illuminance Estimation via Deep Neural Networks
 
-We release the Caffe code of the [DeepIlluminance](https://arxiv.org/abs/1905.04791).
+We release the Caffe code of [DeepIlluminance](https://arxiv.org/abs/1905.04791).
+
 
 
 ### Reference
@@ -20,17 +21,15 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 
 The code is built with following libraries:
 
-
 - [Caffe](https://caffe.berkeleyvision.org/)
 - [Python 2.7](https://www.anaconda.com/distribution/)
 - [Matlab 2016b](https://www.mathworks.com/products/matlab.html)
 
-
 ### Data Pre-processing
 
-- We have trained on ColorChecker and NUS-8 datasets. Please refer to [ColorChecker](https://www2.cs.sfu.ca/~colour/data/shi_gehler/) and [NUS-8] (http://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) datasets for the detailed guide of data generation.
+- We have trained on ColorChecker and NUS-8 datasets. Please refer to [ColorChecker](https://www2.cs.sfu.ca/~colour/data/shi_gehler/) and [NUS-8](http://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) datasets for the detailed guide of data generation.
 Basically, the processing of image data can be summarized into 3 steps:
-- Sample image patches with both bright and dark pixels (refer to [search_patch_neighbor.py](./search_patch_neighbor.py)) 
+- Sample image patches containing both bright and dark pixels (refer to [search_patch_neighbor.py](./search_patch_neighbor.py)) 
 - View the gamma correction patches (refer to [gamma.m](./gamma.m))
 - Generate LMDB files (refer to [create_data_lmdb.sh](./create_data_lmdb.sh) and [create_lmdb.py](./create_lmdb.py))
 
@@ -43,11 +42,11 @@ Here we provide the pretrained models on ColorChecker for fine-tuning at BaiduYu
 
 ### Testing 
 
-For example, to test the downloaded pretrained models on ColorChecker, you can run `context_network/trained_model/test.py` to get the output of the contextual network. Then, run 'refinement_network/trained_model/test.py to get the final estimation result'.
+For example, to test the downloaded pretrained models on ColorChecker, you can run `context_network/trained_model/test.py` to get the output of the contextual network. Then, run `refinement_network/trained_model/test.py` to get the final estimation result.
 
 
 ### Training 
 
-We provided codes to train DeepIlluminance network with this repo:
-  For the contextual network: refer to context_network/patch_model.py 
-  For the refinement network: refer to refinement_network/patch_model.py
+We provide codes to train DeepIlluminance network with this repo:
+  For the contextual network: refer to [patch_model.py](./context_network/patch_model.py)
+  For the refinement network: refer to [patch_model.py](./refinement_network/patch_model.py)
