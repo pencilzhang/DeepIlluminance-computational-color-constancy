@@ -27,11 +27,11 @@ The code is built with following libraries:
 
 ### Data Pre-processing
 
-- We have trained on ColorChecker and NUS-8 dataset. Please refer to [ColorChecker](https://www2.cs.sfu.ca/~colour/data/shi_gehler/) and [NUS-8] (http://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) datasets for the detailed guide of data generation.
+- We have trained on ColorChecker and NUS-8 datasets. Please refer to [ColorChecker](https://www2.cs.sfu.ca/~colour/data/shi_gehler/) and [NUS-8] (http://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) datasets for the detailed guide of data generation.
 Basically, the processing of image data can be summarized into 3 steps:
-- Sample image patches with both bright and dark pixels (refer to [search_patch_neighbor.py] (search_patch_neighbor.py)) 
-- View the gamma correction patches (refer to [gamma.m] (gamma.m))
-- Generate LMDB files (refer to [create_data_lmdb.sh] (create_data_lmdb.sh) and [create_lmdb.py] (create_lmdb.py)
+- Sample image patches with both bright and dark pixels (refer to [search_patch_neighbor.py](./search_patch_neighbor.py)) 
+- View the gamma correction patches (refer to [gamma.m](./gamma.m))
+- Generate LMDB files (refer to [create_data_lmdb.sh](./create_data_lmdb.sh) and [create_lmdb.py](./create_lmdb.py))
 
 
 ### ColorChecker Pretrained Models
@@ -47,6 +47,6 @@ For example, to test the downloaded pretrained models on ColorChecker, you can r
 
 ### Training 
 
-We provided codes to train DeepIlluminance with this repo:
-  For the contextual network: refer to data/context_network/patch_model.py 
+We provided codes to train DeepIlluminance network with this repo:
+  For the contextual network: refer to context_network/patch_model.py 
   For the refinement network: refer to refinement_network/patch_model.py
