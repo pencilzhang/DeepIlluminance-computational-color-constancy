@@ -9,7 +9,7 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 
 ```
 @article{Zhang2019illuminance,
-    title={Temporal Shift Module for Efficient Video Understanding},
+    title={DeepIlluminance: Contextual Illuminance Estimation via Deep Neural Networks},
     author={Zhang, Jun and Zheng, Tong and Zhang, Shengping and Wang, Meng},
     journal={arXiv preprint arXiv:1905.04791},
     year={2019}
