@@ -3,7 +3,6 @@
 We release the Caffe code of [DeepIlluminance](https://arxiv.org/abs/1905.04791).
 
 
-
 ### Reference
 
 If you find our paper and repo useful, please cite our paper. Thanks!
@@ -25,7 +24,7 @@ The code is built with following libraries:
 - [Python 2.7](https://www.anaconda.com/distribution/)
 - [Matlab 2016b](https://www.mathworks.com/products/matlab.html)
 
-### Data Pre-processing
+### Data pre-processing
 
 - We have trained on ColorChecker and NUS-8 datasets. Please refer to [ColorChecker](https://www2.cs.sfu.ca/~colour/data/shi_gehler/) and [NUS-8](http://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) datasets for the detailed guide of data generation.
 Basically, the processing of image data can be summarized into 3 steps:
@@ -34,7 +33,7 @@ Basically, the processing of image data can be summarized into 3 steps:
 - Generate LMDB files (refer to [create_data_lmdb.sh](./create_data_lmdb.sh) and [create_lmdb.py](./create_lmdb.py))
 
 
-### ColorChecker Pretrained Models
+### ColorChecker pretrained models
 
 Here we provide the pretrained models on ColorChecker for fine-tuning at BaiduYun: https://pan.baidu.com/s/1NfvBGdxmj3oA503UJK9pbg#list/path=%2Fpretrained_model and GoogleDrive: 
 
@@ -48,5 +47,5 @@ For example, to test the downloaded pretrained models on ColorChecker, you can r
 ### Training 
 
 We provide codes to train DeepIlluminance network with this repo:
-  For the contextual network: refer to [patch_model.py](./context_network/patch_model.py)
-  For the refinement network: refer to [patch_model.py](./refinement_network/patch_model.py)
+  For the contextual network: run `./context_network/train.py`
+  For the refinement network: run `./refinement_network/train.py`
