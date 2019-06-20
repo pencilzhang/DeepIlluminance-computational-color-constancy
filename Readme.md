@@ -35,17 +35,17 @@ Basically, the processing of image data can be summarized into 3 steps:
 
 ### ColorChecker pretrained models
 
-Here we provide the pretrained models on ColorChecker for fine-tuning at BaiduYun: https://pan.baidu.com/s/1NfvBGdxmj3oA503UJK9pbg#list/path=%2Fpretrained_model and GoogleDrive: 
+Here we provide the pretrained models on ColorChecker for fine-tuning at WeYun: https://share.weiyun.com/50GG5jx and GoogleDrive: https://drive.google.com/open?id=15tvz2DzlCQi3VgOpghGtkCwcf1giorWE.
 
 
 
 ### Testing 
 
-For example, to test the downloaded pretrained models on ColorChecker, you can run `context_network/trained_model/test.py` to get the output of the contextual network. Then, run `refinement_network/trained_model/test.py` to get the final estimation result.
+For example, to test the downloaded pretrained models on ColorChecker, you can run `python context_network/trained_model/test.py` to get the output of the contextual network. Then, run `python refinement_network/trained_model/test.py` to get the final estimation result.
 
 
 ### Training 
 
 We provide codes to train DeepIlluminance network with this repo:
-  For the contextual network: run `./context_network/train.py`
-  For the refinement network: run `./refinement_network/train.py`
+  For the contextual network: run `python ./context_network/train.py`
+  For the refinement network: run `python ./refinement_network/train.py`
