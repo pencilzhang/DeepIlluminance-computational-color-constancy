@@ -35,7 +35,7 @@ Basically, the processing of image data can be summarized into 3 steps:
 
 ### ColorChecker pretrained models
 
-Here we provide the pretrained models on ColorChecker for fine-tuning at WeYun: https://share.weiyun.com/50GG5jx and GoogleDrive: https://drive.google.com/open?id=15tvz2DzlCQi3VgOpghGtkCwcf1giorWE.
+Here we provide the pretrained models on ColorChecker for fine-tuning at WeYun: https://share.weiyun.com/50GG5jx or GoogleDrive: https://drive.google.com/open?id=15tvz2DzlCQi3VgOpghGtkCwcf1giorWE.
 
 
 
